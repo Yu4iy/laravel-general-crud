@@ -10,8 +10,6 @@
 <body>
 	<section class="start-page">
 		<img class="start-page__img" src="{{asset('images/main-logo.png')}}" alt="">
-
-
 		<div class="form">
 			<form>
 				 <div class="form__wrap">
