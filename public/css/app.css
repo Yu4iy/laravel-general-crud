@@ -182,3 +182,24 @@ table {
     display: block;
   }
 }
+
+.profiles {
+  height: calc(100vh - 124px);
+  background-color: #002668;
+  position: relative;
+}
+.profiles__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.profiles__item {
+  text-align: center;
+  margin: 10px 20px;
+  padding: 30px 5px;
+  width: 200px;
+  background: #5e5c5969;
+  color: #fff;
+  list-style: none;
+  border-radius: 5px;
+}

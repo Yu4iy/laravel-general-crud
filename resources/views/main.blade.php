@@ -1,20 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>main</title>
-	<link rel="stylesheet" href="{{asset('css/app.css')}}">
-</head>
-<body>
-	{{-- HEADER --}}
-	@include('partials.header')
+
+@extends('layouts.main')
+
+@section('content')
+	<section class="profiles">
+		<div class="container">
+			<ul class="profiles__row">
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
+
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
+
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
+
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
+
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
+				<li class="profiles__item">
+					<img src="https://randomuser.me/api/portraits/men/85.jpg" alt="">
+					<h4>PAOLO DUZIONI</h4>
+					<div>age:35</div>
+					<div>Conviction:yes</div>
+				</li>
 
 
-	{{-- MAIN CONTENT --}}
-	@yield('content')
-
-	{{-- FOOTER  --}}
-</body>
-</html>
+			</ul>
+		</div>
+	</section>
+@endsection
