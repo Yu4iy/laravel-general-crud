@@ -1,0 +1,123 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-family: sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+nav ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 1212px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.start-page {
+  background-color: #002768;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.start-page__img {
+  max-width: 250px;
+  max-height: 250px;
+  -webkit-animation: rotate3d linear infinite 8s;
+          animation: rotate3d linear infinite 8s;
+  transition: linear 8s;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.start-page__form {
+  display: flex;
+  justify-content: center;
+}
+
+@-webkit-keyframes rotate3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}
+.form {
+  padding: 10px;
+  background: #f8f8f825;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+.form__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form__item {
+  min-width: 200px;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 18;
+  outline: none;
+}
+.form__item:focus {
+  box-shadow: rgba(14, 28, 155, 0.25) 0px 14px 28px, rgba(13, 16, 148, 0.22) 0px 10px 10px;
+}
+.form__btn {
+  margin-top: 20px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #f6ba27;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  transition: all ease-in 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.form__btn:hover {
+  background-color: #d1a025;
+}
+.form__btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.form label {
+  color: #fff;
+}
