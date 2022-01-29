@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Profile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProfileController extends Controller
 {
@@ -14,7 +15,8 @@ class ProfileController extends Controller
      */
     public function index()
     {
-		return view('main');
+		$profiles = Profile::all();
+		return view('profiles.main', compact('profiles'));
     }
 
     /**
@@ -24,7 +26,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+      return view('profiles.create');
     }
 
     /**
@@ -35,7 +37,23 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$data = $request->all();
+      
+		$new_profile = new Profile();
+		$new_profile->first_name = $data['first_name'];
+		$new_profile->last_name = $data['last_name'];
+		$new_profile->age = $data['age'];
+		$new_profile->date_of_birth = $data['date_of_birth'];
+		$new_profile->gender = $data['gender'];
+		$new_profile->country = $data['country'];
+		$new_profile->city = $data['city'];
+		$new_profile->address = $data['address'];
+		$new_profile->cell = $data['cell'];
+		$new_profile->criminal = $data['criminal'];
+		$new_profile->active_warants = $data['active_warants'];
+		$new_profile->img_url = $data['img_url'];
+		$new_profile->slug = Str::slug($data['first_name'] .' '.	 $data['last_name'].'-');
+		$new_profile->save();
     }
 
     /**

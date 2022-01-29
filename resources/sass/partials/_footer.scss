@@ -1,0 +1,42 @@
+.footer {
+	background-color: $main-col;
+	position: relative;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	&::before{
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 10px;
+		background-color: $second-col;
+		top: -5px;
+		z-index: 1;
+		transform: translateY(-50%);
+	}
+	&__btn{
+		color: #fff;
+		text-decoration: none;
+		background-color: $second-col;
+		text-transform: uppercase;
+		padding: 5px 10px;
+		margin: 0 0 0 20px;
+		border-radius: 5px;
+		font-weight: 700;
+		transition: all ease-in 0.2s;
+		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+		border:2px solid  #97751e;
+		&:hover{
+			background-color: #d1a025;
+			
+		}
+		&:active{
+			transform: translate(2px, 2px);
+			box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+		}
+	
+	}
+
+
+
+}

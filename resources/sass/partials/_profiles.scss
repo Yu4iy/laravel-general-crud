@@ -1,5 +1,5 @@
 .profiles{
-	height: calc(100vh - 124px);
+	height: calc(100vh - 124px - 40px);
 	background-color: #002668;
 	position: relative;
 	&__row {
@@ -18,6 +18,12 @@
 		list-style: none;
 		border-radius: 5px;
 
+	}
+	&__placeholder{
+		font-size: 45px;
+		font-weight: 700;
+		color: #fff;
+		;
 	}
 }
 
