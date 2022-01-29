@@ -112,6 +112,7 @@ class ProfileController extends Controller
 
 		
 		$profile->save();
+		return redirect()->route('profiles.show', $profile['id']);
 
     }
 

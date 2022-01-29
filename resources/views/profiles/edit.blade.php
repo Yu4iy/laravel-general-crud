@@ -71,7 +71,7 @@
 						<option value="{{$profile['active_warants']}}" value="0">No</option>
 					 </select>
 				</div>
-				<button class="form-create__btn">CREATE</button>
+				<button class="form-create__btn">EDIT</button>
 			</form>
 		</div>
 	</div>

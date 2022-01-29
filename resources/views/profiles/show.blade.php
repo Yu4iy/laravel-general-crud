@@ -20,8 +20,8 @@
 			<div>Cell: {{$profile['cell']}}</div>
 			<div>Criminal: @if ($profile['criminal'] === 1) <span class="yes">Yes</span> @else <span class="no">No</span> @endif</div>
 			<div>Active Warants: @if ($profile['active_warants'] === 1) <span class="yes">Yes</span> @else <span class="no">No</span> @endif</div>
-			<a href="{{route('profiles.edit', $profile['id'])}}" class="profile-display__btn">edit</a>
 			<form action="{{route('profiles.destroy', $profile['id'])}}" method="POST">
+				<a href="{{route('profiles.edit', $profile['id'])}}" class="profile-display__btn">edit</a>
 				@csrf
 				@method('DELETE')
 				<button type="submit" class="profile-display__btn"">remove</a>
