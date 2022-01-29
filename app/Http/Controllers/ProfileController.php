@@ -54,6 +54,7 @@ class ProfileController extends Controller
 		$new_profile->img_url = $data['img_url'];
 		$new_profile->slug = Str::slug($data['first_name'] .' '.	 $data['last_name'].'-');
 		$new_profile->save();
+		return redirect()->route('profiles.show', $new_profile['id']);
     }
 
     /**
@@ -64,7 +65,13 @@ class ProfileController extends Controller
      */
     public function show(Profile $profile)
     {
-        //
+		// $singl_profile = new Profile();  
+		// $singl_profile = Profile::find($profile);
+		if($profile){
+			return view('profiles.show', compact('profile'));
+		}
+
+		abort(404);
     }
 
     /**
@@ -75,7 +82,7 @@ class ProfileController extends Controller
      */
     public function edit(Profile $profile)
     {
-        //
+      return view('profiles.edit', compact('profile'));
     }
 
     /**
@@ -87,7 +94,25 @@ class ProfileController extends Controller
      */
     public function update(Request $request, Profile $profile)
     {
-        //
+		$data = $request->all();
+		
+
+		$profile->first_name = $data['first_name'];
+		$profile->last_name = $data['last_name'];
+		$profile->age = $data['age'];
+		$profile->date_of_birth = $data['date_of_birth'];
+		$profile->gender = $data['gender'];
+		$profile->country = $data['country'];
+		$profile->city = $data['city'];
+		$profile->address = $data['address'];
+		$profile->cell = $data['cell'];
+		$profile->criminal = $data['criminal'];
+		$profile->active_warants = $data['active_warants'];
+		$profile->img_url = $data['img_url'];
+
+		
+		$profile->save();
+
     }
 
     /**
@@ -98,6 +123,8 @@ class ProfileController extends Controller
      */
     public function destroy(Profile $profile)
     {
-        //
+      $profile->delete();
+		return redirect()->route('profiles.index');
+
     }
 }
