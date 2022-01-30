@@ -18,10 +18,8 @@
 					@empty
 					<h2 class="profiles__placeholder">DATA BASE EMPTY</h2>
 					@endforelse
-
-
-
-			</ul>
+				</ul>
 		</div>
+		<div class="pagination">{{ $profiles->links()}}</div>
 	</section>
 @endsection

@@ -4,7 +4,7 @@
 @section('content')
 <section class="form-create">
 	<div class="form-create__wrap">
-		<div class="form-create__filde">
+			<a class="close-btn" href="{{route('profiles.index')}}"><i class="fas fa-times"></i></a>
 			<form action="{{route('profiles.update', $profile['id'])}}" method="POST">
 				@csrf
 				@method('PATCH')
@@ -73,7 +73,6 @@
 				</div>
 				<button class="form-create__btn">EDIT</button>
 			</form>
-		</div>
 	</div>
 </section>
 @endsection

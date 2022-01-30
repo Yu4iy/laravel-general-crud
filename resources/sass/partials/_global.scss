@@ -43,7 +43,7 @@ table {
  }
 
  .yes{
-	 color: rgb(128, 0, 0);
+	 color: rgb(163, 4, 4);
 	 text-transform: uppercase;
  }
  .no{
@@ -51,3 +51,23 @@ table {
 	 text-transform: uppercase;
 	
  }
+
+ .close-btn{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	font-size: 24px;
+	i{
+		color: #fff;
+	}
+}
+
+.pagination{
+	display: flex;
+	justify-content: center;
+	a{
+		text-decoration: none;
+		color: #d1a025;
+		margin: 0 10px;
+	}
+}

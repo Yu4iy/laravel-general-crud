@@ -9,6 +9,7 @@
 	background: #f8f8f825;
 	border-radius: 5px;
 	padding: 20px 60px;
+	position: relative;
 	&__img{
 		border: 4px solid #d1a025; 
 	}
@@ -44,4 +45,5 @@
 			box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 		}
 	}
+
 }

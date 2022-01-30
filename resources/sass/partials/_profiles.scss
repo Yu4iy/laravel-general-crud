@@ -6,6 +6,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		a{
+			text-decoration: none;
+		}
+		img{
+			border: 2px solid #d1a025;
+		}
 	}
 
 	&__item {
@@ -23,7 +29,7 @@
 		font-size: 45px;
 		font-weight: 700;
 		color: #fff;
-		;
+		
 	}
 }
 

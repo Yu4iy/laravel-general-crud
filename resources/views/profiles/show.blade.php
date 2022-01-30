@@ -4,6 +4,7 @@
 @section('content')
 <section class="show-page">
 	<div class="profile-display">
+		<a class="close-btn" href="{{route('profiles.index')}}"><i class="fas fa-times"></i></a>
 		<div class="profile-display__info">
 			<img class="profile-display__img" src="{{$profile['img_url']}}" alt="">
 			<div>
@@ -27,7 +28,6 @@
 				<button type="submit" class="profile-display__btn"">remove</a>
 			</form>
 		</div>
-		
 	</div>
 </section>
 @endsection
