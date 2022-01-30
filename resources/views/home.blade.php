@@ -19,7 +19,7 @@
 
 					<label class="form__item" >Password:</label>
 					<input class="form__item" type="password" name="field5" />
-					<a class="form__btn" href="{{route('profiles.index')}}">LOGIN</a>
+					<a class="form__btn btn" href="{{route('profiles.index')}}">LOGIN</a>
 				 </div>
 			</form>
 			</div>
